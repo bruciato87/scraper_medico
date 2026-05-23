@@ -31,15 +31,15 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 3: Session Persistence & Delta Detection Modules' (Protocol in workflow.md) (8617a9c)
 
 ## Phase 4: Scraper Core, Orchestration & Main Loop
-- [ ] Task: Implement Playwright browser automation
-    - [ ] Create `lib/scraper.js` containing Playwright workflows:
-        - [ ] Login Mode: Navigate to FSE homepage, wait for manual CIE login, save context to `auth_state.json`, and close
-        - [ ] Scraping Mode: Load context, directly navigate to GP Choice, input/filter "Melegnano" and "Cerro al Lambro", and scrape available physicians
-- [ ] Task: Implement Orchestrator and Main Loop
-    - [ ] Create `index.js` as the main script entry point
-    - [ ] Orchestrate the cycle:
-        - [ ] Check if `auth_state.json` exists. If not, trigger Login Mode
-        - [ ] Run verification scraper: extract data, run delta check, trigger alert email if changes found, update snapshot
-        - [ ] Implement error handling: if session is expired, send alert email and await user action; if network failure, log and retry in 15 mins
-        - [ ] Setup infinite 15-minute interval or cron-based loop
-- [ ] Task: Conductor - User Manual Verification 'Phase 4: Scraper Core, Orchestration & Main Loop' (Protocol in workflow.md)
+- [x] Task: Implement Playwright browser automation
+    - [x] Create `lib/scraper.js` containing Playwright workflows:
+        - [x] Login Mode: Navigate to FSE homepage, wait for manual CIE login, save context to `auth_state.json`, and close
+        - [x] Scraping Mode: Load context, directly navigate to GP Choice, input/filter "Melegnano" and "Cerro al Lambro", and scrape available physicians
+- [x] Task: Implement Orchestrator and Main Loop
+    - [x] Create `index.js` as the main script entry point
+    - [x] Orchestrate the cycle:
+        - [x] Check if `auth_state.json` exists. If not, trigger Login Mode
+        - [x] Run verification scraper: extract data, run delta check, trigger alert email if changes found, update snapshot
+        - [x] Implement error handling: if session is expired, send alert email and await user action; if network failure, log and retry in 15 mins
+        - [x] Setup infinite 15-minute interval or cron-based loop
+- [x] Task: Conductor - User Manual Verification 'Phase 4: Scraper Core, Orchestration & Main Loop' (Protocol in workflow.md) (8022da9)
