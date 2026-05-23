@@ -11,14 +11,14 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Setup' (Protocol in workflow.md) (a648d44)
 
 ## Phase 2: Configuration & Notification Modules
-- [ ] Task: Write Tests for configuration and notification modules (Red Phase)
-    - [ ] Create test file `test/config.test.js` to verify environment validation and default settings
-    - [ ] Create test file `test/notifier.test.js` to verify email generation structure and SMTP triggers
-- [ ] Task: Implement configuration and notification modules (Green Phase)
-    - [ ] Create `lib/config.js` to load and validate environment parameters
-    - [ ] Create `lib/notifier.js` to generate premium HTML tables and send emails via Nodemailer
-    - [ ] Run tests and verify they pass with high coverage
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Configuration & Notification Modules' (Protocol in workflow.md)
+- [x] Task: Write Tests for configuration and notification modules (Red Phase)
+    - [x] Create test file `test/config.test.js` to verify environment validation and default settings
+    - [x] Create test file `test/notifier.test.js` to verify email generation structure and SMTP triggers
+- [x] Task: Implement configuration and notification modules (Green Phase)
+    - [x] Create `lib/config.js` to load and validate environment parameters
+    - [x] Create `lib/notifier.js` to generate premium HTML tables and send emails via Nodemailer
+    - [x] Run tests and verify they pass with high coverage
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Configuration & Notification Modules' (Protocol in workflow.md) (75ea62f)
 
 ## Phase 3: Session Persistence & Delta Detection Modules
 - [ ] Task: Write Tests for session persistence and historical comparison (Red Phase)
