@@ -21,14 +21,14 @@
 - [x] Task: Conductor - User Manual Verification 'Phase 2: Configuration & Notification Modules' (Protocol in workflow.md) (75ea62f)
 
 ## Phase 3: Session Persistence & Delta Detection Modules
-- [ ] Task: Write Tests for session persistence and historical comparison (Red Phase)
-    - [ ] Create test file `test/session.test.js` to verify JSON read/write of state and expiration detections
-    - [ ] Create test file `test/comparer.test.js` to verify comparison logic between current and baseline snapshots
-- [ ] Task: Implement session persistence and historical comparison (Green Phase)
-    - [ ] Create `lib/session.js` to read/write `auth_state.json` and validate cookies/storage
-    - [ ] Create `lib/comparer.js` to load/save `medici_snapshot.json` and isolate new GPs or freed slots
-    - [ ] Run tests and verify they pass with high coverage
-- [ ] Task: Conductor - User Manual Verification 'Phase 3: Session Persistence & Delta Detection Modules' (Protocol in workflow.md)
+- [x] Task: Write Tests for session persistence and historical comparison (Red Phase)
+    - [x] Create test file `test/session.test.js` to verify JSON read/write of state and expiration detections
+    - [x] Create test file `test/comparer.test.js` to verify comparison logic between current and baseline snapshots
+- [x] Task: Implement session persistence and historical comparison (Green Phase)
+    - [x] Create `lib/session.js` to read/write `auth_state.json` and validate cookies/storage
+    - [x] Create `lib/comparer.js` to load/save `medici_snapshot.json` and isolate new GPs or freed slots
+    - [x] Run tests and verify they pass with high coverage
+- [x] Task: Conductor - User Manual Verification 'Phase 3: Session Persistence & Delta Detection Modules' (Protocol in workflow.md) (8617a9c)
 
 ## Phase 4: Scraper Core, Orchestration & Main Loop
 - [ ] Task: Implement Playwright browser automation
