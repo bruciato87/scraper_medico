@@ -13,3 +13,6 @@ Welcome to the Conductor Project Index. Below is the documentation for the proje
 All development features, chores, and bug fixes are organized into "Tracks" below.
 
 ---
+
+- [ ] **Track: Configura uno script di automazione locale in Node.js utilizzando Playwright per verificare ogni 15 minuti la disponibilità di nuovi medici di medicina generale per i comuni di Melegnano e Cerro al Lambro sul portale di Regione Lombardia.**
+*Link: [./tracks/scraper_gp_20260523/](./tracks/scraper_gp_20260523/)*
