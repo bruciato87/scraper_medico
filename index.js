@@ -44,17 +44,30 @@ async function runCycle() {
 
     // Check for changes against the baseline snapshot
     const changes = await getChangesAndUpdateSnapshot(doctors);
+    const forceEmail = process.env.FORCE_EMAIL === 'true';
 
-    if (changes.length > 0) {
-      console.log(`[${getTimestamp()}] [SUCCESS] Rilevati ${changes.length} medici con novità/posti liberi!`);
-      changes.forEach((m) => {
-        const type = m.isNew ? 'NUOVO MEDICO' : 'POSTI LIBERATI';
-        console.log(` -> [${type}] ${m.firstName} ${m.lastName} - Comune: ${m.scope} - Posti: ${m.spots} - Via: ${m.address}`);
-      });
+    if (changes.length > 0 || forceEmail) {
+      if (changes.length > 0) {
+        console.log(`[${getTimestamp()}] [SUCCESS] Rilevati ${changes.length} medici con novità/posti liberi!`);
+        changes.forEach((m) => {
+          const type = m.isNew ? 'NUOVO MEDICO' : 'POSTI LIBERATI';
+          console.log(` -> [${type}] ${m.firstName} ${m.lastName} - Comune: ${m.scope} - Posti: ${m.spots} - Via: ${m.address}`);
+        });
+      } else {
+        console.log(`[${getTimestamp()}] [INFO] Nessun cambio di disponibilità rilevato, ma invio e-mail forzato (FORCE_EMAIL=true).`);
+      }
 
-      // Send alert email SMTP
+      // Send alert email
       console.log(`[${getTimestamp()}] [INFO] Invio notifica e-mail in corso...`);
-      await sendEmail('new_gp', changes);
+      const emailData = changes.length > 0 ? changes : [{
+        firstName: 'Nessun medico',
+        lastName: 'disponibile al momento',
+        scope: 'Stato scansione',
+        address: 'Scansione completata con successo',
+        spots: 0,
+        isNew: false
+      }];
+      await sendEmail('new_gp', emailData);
     } else {
       console.log(`[${getTimestamp()}] [INFO] Nessun cambio di disponibilità rilevato rispetto all'ultimo snapshot.`);
     }
