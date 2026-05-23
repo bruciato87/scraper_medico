@@ -1,14 +1,14 @@
 # Implementation Plan - GP Availability Scraper
 
 ## Phase 1: Project Scaffolding & Setup
-- [ ] Task: Set up core configuration files and folder structures
-    - [ ] Create `.gitignore` to exclude `.env`, `auth_state.json`, `medici_snapshot.json`, and `node_modules`
-    - [ ] Create `package.json` with ESM enabled (`"type": "module"`) and scripts configured (`start`, `check-once`, `test`)
-    - [ ] Create `.env.example` precompiled with standard SMTP and notification variables
-- [ ] Task: Install dependencies and browser binaries
-    - [ ] Install production dependencies: `playwright`, `nodemailer`, `dotenv`
-    - [ ] Install Playwright Chromium browser binaries using the Playwright CLI
-- [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Setup' (Protocol in workflow.md)
+- [x] Task: Set up core configuration files and folder structures
+    - [x] Create `.gitignore` to exclude `.env`, `auth_state.json`, `medici_snapshot.json`, and `node_modules`
+    - [x] Create `package.json` with ESM enabled (`"type": "module"`) and scripts configured (`start`, `check-once`, `test`)
+    - [x] Create `.env.example` precompiled with standard SMTP and notification variables
+- [x] Task: Install dependencies and browser binaries
+    - [x] Install production dependencies: `playwright`, `nodemailer`, `dotenv`
+    - [x] Install Playwright Chromium browser binaries using the Playwright CLI
+- [x] Task: Conductor - User Manual Verification 'Phase 1: Project Scaffolding & Setup' (Protocol in workflow.md) (a648d44)
 
 ## Phase 2: Configuration & Notification Modules
 - [ ] Task: Write Tests for configuration and notification modules (Red Phase)
