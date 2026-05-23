@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Local session state and snapshot files
+auth_state.json
+medici_snapshot.json
+
+# Environment variables
+.env
+
+# Logs and system files
+*.log
+.DS_Store
+.antigravitycli/

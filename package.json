@@ -1,0 +1,17 @@
+{
+  "name": "scraper-medico",
+  "version": "1.0.0",
+  "description": "Local general practitioner availability checker for FSE Regione Lombardia",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check-once": "CHECK_ONCE=true node index.js",
+    "test": "node --test test/**/*.test.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemailer": "^6.9.13",
+    "playwright": "^1.44.0"
+  }
+}
